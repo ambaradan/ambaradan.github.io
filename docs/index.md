@@ -1,3 +1,3 @@
 Index di docs  
 [test.md](test.md)  
-[FreeBSD](freebs/index.md)
+[FreeBSD](freebsd/index.md)
