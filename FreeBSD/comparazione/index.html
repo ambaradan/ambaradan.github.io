@@ -1,0 +1,1437 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="ambaradan">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Linux vs FreeBSD - unixlike.info</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PVPJNDS4GY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-PVPJNDS4GY",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVPJNDS4GY"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unintroduzione-comparativa-a-freebsd-per-gli-utenti-linux" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="unixlike.info" class="md-header__button md-logo" aria-label="unixlike.info" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            unixlike.info
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux vs FreeBSD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Modalità scura"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Modalità scura" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Modalità chiara"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Modalità chiara" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Cancella" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Introduzione
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        FreeBSD
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../MkDocs/01_mkdocs_intro.it/" class="md-tabs__link">
+        MkDocs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../NvChad/install/" class="md-tabs__link">
+        NvChad
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Rocky_Linux/" class="md-tabs__link">
+        Rocky Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../SysAdmin/inxi/" class="md-tabs__link">
+        SysAdmin
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terminologia/01_upstream_downstream/" class="md-tabs__link">
+        Terminologia
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="unixlike.info" class="md-nav__button md-logo" aria-label="unixlike.info" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    unixlike.info
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          FreeBSD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="FreeBSD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          FreeBSD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introduzione FreeBSD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linux vs FreeBSD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linux vs FreeBSD
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    Introduzione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tratti-che-freebsd-e-linux-condividono" class="md-nav__link">
+    Tratti che FreeBSD e Linux condividono
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenze-di-licenza" class="md-nav__link">
+    Differenze di licenza
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-lignaggio-freebsd-e-le-sue-implicazioni" class="md-nav__link">
+    Il lignaggio FreeBSD e le sue implicazioni
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separazione-del-sistema-operativo-principale-dal-software-aggiuntivo" class="md-nav__link">
+    Separazione del sistema operativo principale dal software aggiuntivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-si-formano-i-rilasci" class="md-nav__link">
+    Come si formano i rilasci
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenze-software-e-progettazione-del-sistema" class="md-nav__link">
+    Differenze software e progettazione del sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazioni-di-pacchetti-e-fonti-supportate" class="md-nav__link">
+    Installazioni di pacchetti e fonti supportate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-vs-software-personalizzato" class="md-nav__link">
+    Vanilla vs Software personalizzato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freebsd-sapore-di-strumenti-comuni" class="md-nav__link">
+    FreeBSD Sapore  di strumenti comuni
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-shell-standard" class="md-nav__link">
+    La Shell standard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-filesystem-piu-stratificato" class="md-nav__link">
+    Un filesystem più stratificato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerazioni-finali" class="md-nav__link">
+    Considerazioni finali
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freebsd_ipfw/" class="md-nav__link">
+        Firewall IPFW su FreeBSD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          FreeBSD su RPI4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="FreeBSD su RPI4" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          FreeBSD su RPI4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FreeBSD_su_RPI4/01_installazione/" class="md-nav__link">
+        Installazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FreeBSD_su_RPI4/02_configurazione/" class="md-nav__link">
+        Configurazione
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/05_git_server/" class="md-nav__link">
+        Git Server Minimale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          MkDocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MkDocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          MkDocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MkDocs/01_mkdocs_intro.it/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MkDocs/02_mkdocs_starter.it/" class="md-nav__link">
+        Mkdocs tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MkDocs/10_virtualenv/" class="md-nav__link">
+        Ambienti Virtuali Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          NvChad
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NvChad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          NvChad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NvChad/install/" class="md-nav__link">
+        Installazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NvChad/post_install/" class="md-nav__link">
+        Post Installazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Configurazione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configurazione" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configurazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NvChad/Configurazione/" class="md-nav__link">
+        Configurazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NvChad/Configurazione/mapping/" class="md-nav__link">
+        Mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NvChad/Configurazione/nvim_lua_stuff/" class="md-nav__link">
+        Nvim lua stuff
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Rocky Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rocky Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Rocky Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocky_Linux/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocky_Linux/Tutorial/increase_speed/" class="md-nav__link">
+        Velocizzare DNF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocky_Linux/Tutorial/log/" class="md-nav__link">
+        Interpretare i logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocky_Linux/Tutorial/power_tools/" class="md-nav__link">
+        Power Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          SysAdmin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SysAdmin" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          SysAdmin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SysAdmin/inxi/" class="md-nav__link">
+        Inxi - Info di Sistema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SysAdmin/kakoune/" class="md-nav__link">
+        Kakoune - moderno VI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Terminologia
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminologia" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Terminologia
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminologia/01_upstream_downstream/" class="md-nav__link">
+        Upstream - Downstream
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminologia/03_epel_intro/" class="md-nav__link">
+        EPEL Repository
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    Introduzione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tratti-che-freebsd-e-linux-condividono" class="md-nav__link">
+    Tratti che FreeBSD e Linux condividono
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenze-di-licenza" class="md-nav__link">
+    Differenze di licenza
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-lignaggio-freebsd-e-le-sue-implicazioni" class="md-nav__link">
+    Il lignaggio FreeBSD e le sue implicazioni
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separazione-del-sistema-operativo-principale-dal-software-aggiuntivo" class="md-nav__link">
+    Separazione del sistema operativo principale dal software aggiuntivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-si-formano-i-rilasci" class="md-nav__link">
+    Come si formano i rilasci
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differenze-software-e-progettazione-del-sistema" class="md-nav__link">
+    Differenze software e progettazione del sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazioni-di-pacchetti-e-fonti-supportate" class="md-nav__link">
+    Installazioni di pacchetti e fonti supportate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-vs-software-personalizzato" class="md-nav__link">
+    Vanilla vs Software personalizzato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freebsd-sapore-di-strumenti-comuni" class="md-nav__link">
+    FreeBSD Sapore  di strumenti comuni
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-shell-standard" class="md-nav__link">
+    La Shell standard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-filesystem-piu-stratificato" class="md-nav__link">
+    Un filesystem più stratificato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerazioni-finali" class="md-nav__link">
+    Considerazioni finali
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  
+
+  <nav class="md-tags" >
+    
+      
+        <span class="md-tag">freebsd</span>
+      
+    
+      
+        <span class="md-tag">linux</span>
+      
+    
+  </nav>
+
+
+
+<p><img align="right" alt="FreeBSD" src="../images/bsd_logo.png#only-light" /></p>
+<h1 id="unintroduzione-comparativa-a-freebsd-per-gli-utenti-linux">Un'introduzione comparativa a FreeBSD per gli utenti Linux</h1>
+<h2 id="introduzione">Introduzione</h2>
+<p>FreeBSD è un sistema operativo Unix-like gratuito e open source e una popolare piattaforma server. Mentre FreeBSD e altri sistemi basati su BSD condividono molto in comune con sistemi come Linux, ci sono punti in cui queste due famiglie divergono in modo importante.</p>
+<p>In questa guida, discuteremo brevemente alcuni punti in comune tra FreeBSD e Linux prima di passare a una discussione più estesa sulle importanti differenze tra loro. Molti dei punti seguenti possono essere applicati con precisione alla più grande famiglia dei sistemi derivati da BSD, ma come conseguenza del nostro focus, ci riferiremo principalmente a FreeBSD come rappresentante della famiglia.</p>
+<h2 id="tratti-che-freebsd-e-linux-condividono">Tratti che FreeBSD e Linux condividono</h2>
+<p>Prima di iniziare a esaminare le aree in cui FreeBSD e Linux differiscono, discutiamo in termini generali le cose che questi sistemi hanno in comune.</p>
+<p>Mentre le licenze specifiche che ogni famiglia impiega differiscono (ne parleremo più avanti), entrambe queste famiglie di sistemi sono gratuite e open source. Gli utenti possono visualizzare e modificare la fonte come desiderano e lo sviluppo viene eseguito in modo aperto.</p>
+<p>Sia le distribuzioni FreeBSD che le distribuzioni basate su Linux sono di natura Unix-like. FreeBSD ha radici vicine ai sistemi Unix del passato, mentre Linux è stato creato da zero come alternativa aperta simile a Unix. Questa aspetto influisce nelle decisioni sulla progettazione dei sistemi, su come i componenti debbano interagire e sulle aspettative generali su come il sistema debba apparire e lavorare.</p>
+<p>Il comportamento comune <em>unix-like</em> è principalmente il risultato del fatto che entrambe le famiglie sono per lo più conformi a POSIX. La sensazione generale e il design dei sistemi sono piuttosto standardizzati e utilizzano modelli simili. La gerarchia del filesystem è divisa in modo simile, gli ambienti shell sono il metodo principale di interazione per entrambi i sistemi e le API di programmazione condividono caratteristiche simili.</p>
+<p>A causa di queste considerazioni, le distribuzioni FreeBSD e Linux sono in grado di condividere molti degli stessi strumenti e applicazioni. Alcuni casi impongono che le versioni o tipi di questi programmi differiscano tra i sistemi, ma le applicazioni possono essere trasferite più facilmente di quanto non si possa fare con sistemi non Unix-like.</p>
+<p>Con questi punti in mente, passeremo ora a discutere le aree in cui queste due famiglie di sistemi operativi divergono. Speriamo che questi punti in comune ti aiutino a digerire più accuratamente le informazioni relative alle loro differenze.</p>
+<h2 id="differenze-di-licenza">Differenze di licenza</h2>
+<p>Una delle differenze fondamentali tra i sistemi FreeBSD e Linux è una questione di licenze.</p>
+<p>Il kernel Linux, le applicazioni basate su GNU e molti pezzi di software originari del mondo Linux sono concessi in licenza sotto una qualche forma di GPL, o GNU General Public License. Questa licenza è spesso descritta come una licenza "<em>copyleft</em>", che è una forma di licenza che consente la libertà di visualizzare, distribuire e modificare il codice sorgente, mentre richiede che qualsiasi opera derivata mantenga tale licenza.</p>
+<p>FreeBSD d'altra parte, incluso il kernel e tutti gli strumenti creati dai contributori di FreeBSD, concede in licenza il suo software sotto una licenza BSD. Questo tipo di licenza è più permissivo della GPL in quanto non richiede lavoro derivato per mantenere i termini di licenza. Ciò significa che qualsiasi persona o organizzazione può utilizzare, distribuire o modificare il programma senza la necessità di apportare modifiche o rilasciare la fonte del lavoro che sta creando. Gli unici requisiti sono che il copyright originale e una copia della licenza BSD siano inclusi nel codice sorgente o nella documentazione (a seconda del metodo di rilascio) dell'opera derivata e che sia incluso un disclaimer fornito che limiti la responsabilità. La licenza principale è molto breve e può essere visionata <a href="http://choosealicense.com/licenses/bsd-2-clause/" title="Licenza BSD">qui</a>.</p>
+<p>L'attrattiva di ciascuno di questi tipi di licenza dipende quasi interamente dalla filosofia e dalle esigenze dell'utente. Le licenze GPL promuovono la condivisione e un ecosistema aperto al di sopra di ogni altra considerazione. Il software proprietario deve stare molto attento a non fare affidamento su software basato su GPL. D'altra parte, il software con licenza BSD può essere liberamente incorporato in applicazioni proprietarie e closed source. Ciò lo rende più attraente per molte aziende e individui che sperano di monetizzare il loro software perché è possibile vendere il software direttamente e conservare la fonte.</p>
+<p>Gli sviluppatori tendono a preferire una filosofia di licenza rispetto all'altra, ma ognuna ha i suoi vantaggi. Comprendere le licenze di questi sistemi può aiutarci a iniziare a capire alcune delle scelte e della filosofia che hanno nel loro sviluppo.</p>
+<h2 id="il-lignaggio-freebsd-e-le-sue-implicazioni">Il lignaggio FreeBSD e le sue implicazioni</h2>
+<p>Un'altra importante differenza tra i sistemi FreeBSD e Linux è il lignaggio e la storia di ciascun sistema. Insieme alle differenze di licenza discusse sopra, questo è forse il più grande influencer della filosofia a cui ogni campo aderisce.</p>
+<p>Linux è un kernel sviluppato da Linus Torvalds come mezzo per sostituire il sistema MINIX orientato all'istruzione, ma restrittivo che stava usando all'Università di Helsinki. Combinato con altri componenti, molti provenienti dalla suite GNU, un sistema operativo costruito sul kernel Linux ha molte proprietà Unix-like, nonostante non sia direttamente derivato da un precedente sistema operativo Unix.
+Poiché Linux è stato avviato da zero senza alcune delle scelte di progettazione e considerazioni ereditate, può differire in modo significativo dai sistemi con legami più stretti con Unix.</p>
+<p>FreeBSD ha molti legami diretti con la sua eredità Unix. BSD, o Berkeley Software Distribution, era una distribuzione di Unix creata presso l'Università della California, Berkeley, che estendeva il set di funzionalità del sistema operativo Unix di AT&amp;T e aveva termini di licenza meno restrittivi. Successivamente, è stata presa la decisione di cercare di sostituire il più possibile il sistema operativo AT&amp;T originale con alternative open source in modo che agli utenti non fosse richiesto di ottenere una licenza AT&amp;T per utilizzare BSD. Alla fine, tutti i componenti dell'originale AT&amp;T Unix furono riscritti sotto la licenza BSD e trasferiti sull'architettura i386 come 386BSD. FreeBSD è stato biforcato da questa base nel tentativo di mantenere, migliorare e modernizzare il lavoro che era già lì, e alla fine è stato rifondato su una versione incompleta chiamata BSD-Lite per motivi di problemi di licenza.</p>
+<p>Attraverso il lungo e multi-stadio processo di derivazione, FreeBSD divenne libero in termini di licenze, ma mantenne stretti legami con il suo passato. Gli sviluppatori che lavoravano per creare il sistema sono rimasti aderenti al modo di operare di Unix, probabilmente perché FreeBSD è sempre stato pensato per operare come un clone di Unix con licenza aperta. Queste radici hanno influenzato la direzione di ogni ulteriore sviluppo e sono la ragione dietro alcune delle scelte di cui parleremo.</p>
+<h2 id="separazione-del-sistema-operativo-principale-dal-software-aggiuntivo">Separazione del sistema operativo principale dal software aggiuntivo</h2>
+<p>Una differenza fondamentale in termini di sforzo di sviluppo e progettazione del sistema tra le distribuzioni FreeBSD e Linux è la portata del sistema. Il team di FreeBSD sviluppa il kernel e il sistema operativo di base come un'unità coesa, mentre Linux si riferisce tecnicamente solo al kernel, con gli altri componenti provenienti da una varietà di fonti.</p>
+<p>Questa potrebbe sembrare una piccola differenza, ma in realtà influisce sul modo in cui interagisci e gestisci ciascun sistema. In Linux, una distribuzione potrebbe raggruppare insieme un gruppo selezionato di pacchetti, assicurando che interagiscano bene insieme. Tuttavia, la maggior parte dei componenti prorrà da una vasta gamma di fonti e gli sviluppatori e i manutentori della distribuzione hanno il compito di modellarli in un sistema che funzioni correttamente.</p>
+<p>In questo senso, i componenti essenziali non sono molto diversi dai pacchetti opzionali disponibili attraverso i repository della distribuzione. Gli strumenti di gestione dei pacchetti della distribuzione vengono utilizzati per tracciare e gestire questi componenti esattamente allo stesso modo. Una distribuzione potrebbe mantenere repository diversi in base a quali team sono responsabili di determinati pacchetti in modo che il team di sviluppo principale debba preoccuparsi solo di un sottoinsieme del software disponibile, ma questa è una differenza organizzativa e di messa a fuoco e generalmente non comporta differenze nella gestione del software dal punto di vista di un utente.</p>
+<p>Al contrario, FreeBSD mantiene un intero sistema operativo di base. Il kernel e una raccolta di software, molti dei quali sono creati dagli stessi sviluppatori di FreeBSD, sono mantenuti come un'unità. Non è così semplice sostituire i componenti che fanno parte di questa raccolta di base perché è, in un certo senso, un insieme monolitico di software. Ciò consente al team di FreeBSD di gestire molto da vicino il sistema operativo principale, garantendo una stretta integrazione e una maggiore prevedibilità.</p>
+<p>Il software incluso nel sistema operativo principale è considerato completamente separato dai componenti offerti come aggiunte opzionali. FreeBSD offre una vasta collezione di software opzionale, proprio come fanno le distribuzioni Linux, ma questo è gestito separatamente. Il sistema principale viene aggiornato come una singola unità in modo indipendente e il software opzionale può essere aggiornato individualmente.</p>
+<h2 id="come-si-formano-i-rilasci">Come si formano i rilasci</h2>
+<p>La maggior parte delle versioni di Linux sono il risultato della raccolta di software da una varietà di fonti e della sua modifica secondo necessità. I manutentori della distribuzione decidono quali componenti includere nel supporto di installazione, quali componenti includere nei repository gestiti dalla distribuzione, ecc. Dopo aver testato i componenti insieme, viene creata una versione contenente il software testato.</p>
+<p>Nell'ultima sezione, abbiamo appreso che:</p>
+<pre><code>Gran parte del sistema operativo FreeBSD è sviluppato dal team di FreeBSD.
+Il sistema operativo di base è l'output principale prodotto.
+Il software di base è considerato un insieme coeso.
+</code></pre>
+<p>Queste qualità portano ad un approccio diverso al rilascio di software rispetto alla maggior parte delle distribuzioni Linux. Poiché FreeBSD organizza le cose a livello di sistema operativo, tutti i componenti di base sono mantenuti all'interno di un singolo repository di codice sorgente. Ciò ha alcune importanti implicazioni.</p>
+<p>Prima di tutto, poiché questi strumenti sono tutti sviluppati in tandem in un unico repository, una versione si forma semplicemente selezionando una revisione di uno dei rami del repository. Questo è simile al modo in cui viene rilasciata la maggior parte del software in quanto un punto stabile viene selezionato da una base di codice organizzata.</p>
+<p>Poiché il sistema operativo di base è tutto sotto il controllo attivo della versione, ciò significa anche che gli utenti possono "tracciare" diversi rami o livelli di stabilità a seconda di quanto stabili vogliano che siano i loro componenti di sistema. Gli utenti non devono aspettare che gli sviluppatori approvino le modifiche per inserirle nel loro sistema.</p>
+<p>Questo è in qualche modo simile agli utenti che tracciano diversi repository organizzati per stabilità in alcune distribuzioni Linux. In Linux, si tiene traccia di un repository di pacchetti, mentre in FreeBSD, è possibile tenere traccia di un ramo di un repository sorgente centralizzato.</p>
+<h2 id="differenze-software-e-progettazione-del-sistema">Differenze software e progettazione del sistema</h2>
+<p>Le restanti differenze che discuteremo saranno legate al software stesso e alle qualità generali del sistema.</p>
+<h2 id="installazioni-di-pacchetti-e-fonti-supportate">Installazioni di pacchetti e fonti supportate</h2>
+<p>Una delle principali differenze tra FreeBSD e la maggior parte delle distribuzioni Linux dal punto di vista dell'utente è la disponibilità e il supporto sia del software confezionato che del software installato dal codice sorgente.</p>
+<p>Mentre la maggior parte delle distribuzioni Linux fornisce solo pacchetti binari precompilati del software supportato dalla distribuzione, FreeBSD contiene sia pacchetti pre-costruiti che un sistema di compilazione per la compilazione e l'installazione dal sorgente. Per la maggior parte dei software, questo consente di scegliere tra pacchetti precompilati costruiti con impostazioni predefinite ragionevoli e la possibilità di personalizzare il software durante il processo di compilazione costruendolo da soli. FreeBSD lo fa attraverso un sistema che chiama "ports".</p>
+<p>Il sistema dei ports FreeBSD è una raccolta di software che FreeBSD è in grado di costruire. Una gerarchia organizzata che rappresenta questo software è disponibile all'interno della directory /usr/ports in cui gli utenti possono eseguire le ricerche nelle directory per ogni applicazione. Queste directory contengono alcuni file che specificano la posizione in cui è possibile ottenere i file sorgente, così come le istruzioni per il compilatore su come applicare correttamente patch al sorgente per funzionare correttamente con FreeBSD.</p>
+<p>Le versioni pacchettizzate del software sono in realtà prodotte dal sistema dei ports, rendendo FreeBSD una distribuzione source-first con pacchetti disponibili per comodità. Il sistema può essere composto sia da software compilato che preconfezionato e il sistema di gestione del software è in grado di gestire adeguatamente una combinazione di questi due metodi di installazione.</p>
+<h2 id="vanilla-vs-software-personalizzato">Vanilla vs Software personalizzato</h2>
+<p>Una decisione che potrebbe sembrare un po 'strana agli utenti che hanno familiarità con alcune delle distribuzioni Linux più popolari è che FreeBSD di solito sceglie di fornire software upstream non modificato ove possibile.</p>
+<p>Molte distribuzioni Linux apportano modifiche al software per facilitare la connessione con altri componenti e per cercare di semplificare la gestione. Buoni esempi di questa tendenza sono la ristrutturazione delle comuni gerarchie di configurazione del server Web per rendere la configurazione del server più modulare.</p>
+<p>Mentre molti utenti trovano utili queste modifiche, ci sono anche degli svantaggi in questo approccio. Un problema con l'apportare modifiche è che si presume di sapere quale approccio funziona meglio per gli utenti. Rende inoltre il software più imprevedibile per gli utenti provenienti da altre piattaforme, in quanto diverge dalle convenzioni a monte.</p>
+<p>I manutentori di FreeBSD spesso modificano il software con le patch, ma questi sono generalmente cambiamenti più conservativi rispetto alle scelte dei pacchetti di alcune distribuzioni Linux. In generale, le modifiche al software nell'ecosistema FreeBSD sono quelle necessarie per far sì che il software sia compilato ed eseguito correttamente in un ambiente FreeBSD e quelle necessarie per definire alcune impostazioni predefinite ragionevoli. I file di configurazione che vengono inseriti nel filesystem in genere non vengono modificati pesantemente, quindi potrebbe essere necessario un po 'di lavoro extra per far sì che i componenti comunichino tra loro.</p>
+<h2 id="freebsd-sapore-di-strumenti-comuni">FreeBSD Sapore  di strumenti comuni</h2>
+<p>Un altro aspetto dei sistemi FreeBSD che potrebbe causare confusione per gli utenti Linux è la disponibilità di strumenti familiari che operano in modo leggermente diverso da quello che farebbero sui sistemi Linux.</p>
+<p>Il team di FreeBSD mantiene la propria versione di un gran numero di strumenti comuni. Mentre molti degli strumenti che si trovano sui sistemi Linux provengono dalla suite GNU, FreeBSD spesso lancia le proprie varianti per il suo sistema operativo.</p>
+<p>Ci sono alcune ragioni per questa decisione. Poiché FreeBSD è responsabile dello sviluppo e della manutenzione del sistema operativo di base, controllare lo sviluppo di queste applicazioni e metterle sotto una licenza BSD è essenziale o utile. Alcuni di questi strumenti hanno anche stretti legami funzionali con gli strumenti BSD e Unix da cui sono stati derivati, a differenza della suite GNU, che in generale tende ad essere meno retrocompatibile.</p>
+<p>Queste differenze si manifestano spesso nelle opzioni e nella sintassi dei comandi. Potresti essere abituato a eseguire un comando in un certo modo sulle tue macchine Linux, ma questi potrebbero non funzionare allo stesso modo su un server FreeBSD. È importante controllare sempre le pagine man dei comandi per familiarizzare con le opzioni per le varianti di FreeBSD.</p>
+<h2 id="la-shell-standard">La Shell standard</h2>
+<p>Un punto correlato che potrebbe causare una certa confusione è che la shell predefinita in FreeBSD non è la <code>bash</code>. FreeBSD usa la <code>tcsh</code> come shell predefinita.</p>
+<p>Questa shell è una versione migliorata di csh, che è la shell C sviluppata per BSD. La shell bash è un componente GNU, il che la rende una scelta sbagliata come impostazione predefinita per FreeBSD. Mentre entrambe le shell generalmente funzionano in modo simile sulla riga di comando, lo scripting non dovrebbe essere fatto in tcsh. L'utilizzo della shell sh di base di Bourne è più affidabile ed evita alcune delle insidie ben documentate associate allo scripting tcsh e csh.</p>
+<p>Vale anche la pena notare che è molto semplice cambiare la shell in quella che usi su linux se ti senti più a tuo agio in quell'ambiente.</p>
+<h2 id="un-filesystem-piu-stratificato">Un filesystem più stratificato</h2>
+<p>Abbiamo menzionato più volte sopra che FreeBSD distingue tra il sistema operativo di base e i componenti opzionali, o ports, che possono essere installati sopra a quel livello.</p>
+<p>Questo ha implicazioni nel modo in cui FreeBSD organizza i componenti nella struttura dei file. In Linux, gli eseguibili si trovano in genere nelle directory <strong>/bin</strong>, <strong>/sbin</strong>, <strong>/usr/sbin</strong> o <strong>/usr/bin</strong> a seconda del loro scopo e di quanto siano essenziali per le funzionalità di base. FreeBSD riconosce queste differenze, ma impone anche un altro livello di separazione tra i componenti installati come parte del sistema di base e quelli installati come ports. Il software di sistema di base risiede in una delle directory precedenti. Tutti i programmi installati come porta o pacchetto vengono inseriti in <strong>/usr/local/bin</strong> o <strong>/usr/local/sbin</strong>.</p>
+<p>La directory <strong>/usr/local</strong> contiene una struttura di directory che rispecchia principalmente la struttura trovata nella directory <strong>/</strong> o <strong>/usr</strong>. Questa è la directory principale per il software installato tramite il sistema di ports. Quasi tutta la configurazione per i ports viene eseguita tramite file situati in <strong>/usr/local/etc</strong> mentre la configurazione del sistema di base viene mantenuta in <strong>/etc</strong> come al solito. In questo modo è facile riconoscere se un'applicazione fa parte dei ports o del sistema di base e aiuta a mantenere pulito il filesystem.</p>
+<h2 id="considerazioni-finali">Considerazioni finali</h2>
+<p>FreeBSD e Linux hanno molte cose in comune, ma se vieni da un background Linux, è importante riconoscere e capire i modi in cui differiscono. Dove i loro percorsi divergono, entrambi i sistemi hanno i loro vantaggi, e i sostenitori di entrambi i campi possono indicare le ragioni delle scelte che sono state fatte.</p>
+<p>Trattare FreeBSD come un proprio sistema operativo invece di insistere nel visualizzarlo attraverso una lente Linux ti aiuterà a evitare di combattere con il sistema operativo e generalmente si tradurrà in un'esperienza migliore.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Ultimo aggiornamento:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 luglio 2022</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Torna su
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Piede" >
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Introduzione FreeBSD" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              Introduzione FreeBSD
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../freebsd_ipfw/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: Firewall IPFW su FreeBSD" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Prossimo
+              </span>
+              Firewall IPFW su FreeBSD
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/ambaradan" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.config.lang": "it", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Cerca", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version.title": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
