@@ -13,7 +13,7 @@
     
     
       
-        <title>Upstream - Downstream - unixlike.info</title>
+        <title>GSettings - unixlike.info</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cose-upstream-e-downstream-nello-sviluppo-del-software" class="md-skip">
+        <a href="#gestire-le-impostazioni-di-gnome-dalla-riga-di-comando-con-gsettings" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Upstream - Downstream
+              GSettings
             
           </span>
         </div>
@@ -200,13 +200,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../desktop/gsettings/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Desktop
       </a>
     </li>
@@ -412,12 +414,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -438,11 +442,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../desktop/gsettings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GSettings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         GSettings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestire-le-impostazioni-di-gnome-dalla-riga-di-comando-con-gsettings" class="md-nav__link">
+    Gestire le impostazioni di GNOME dalla riga di comando con gsettings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gsettings" class="md-nav__link">
+    gsettings
+  </a>
+  
+    <nav class="md-nav" aria-label="gsettings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impostare-i-font-dellinterfaccia" class="md-nav__link">
+    Impostare i font dell'interfaccia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificare-il-tema-delle-icone" class="md-nav__link">
+    Modificare il tema delle icone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -454,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../desktop/kernel_realtime/" class="md-nav__link">
+      <a href="../kernel_realtime/" class="md-nav__link">
         Kernel Real-Time
       </a>
     </li>
@@ -1103,84 +1171,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cose-upstream-e-downstream-nello-sviluppo-del-software" class="md-nav__link">
-    Cos'è Upstream e Downstream nello sviluppo del software?
+  <a href="#gestire-le-impostazioni-di-gnome-dalla-riga-di-comando-con-gsettings" class="md-nav__link">
+    Gestire le impostazioni di GNOME dalla riga di comando con gsettings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-monte-e-a-valle-in-un-processo-di-produzione" class="md-nav__link">
-    A monte e a valle in un processo di produzione
+  <a href="#gsettings" class="md-nav__link">
+    gsettings
   </a>
   
-    <nav class="md-nav" aria-label="A monte e a valle in un processo di produzione">
+    <nav class="md-nav" aria-label="gsettings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#passi-del-processo-da-monte-a-valle" class="md-nav__link">
-    Passi del processo da monte a valle
+  <a href="#impostare-i-font-dellinterfaccia" class="md-nav__link">
+    Impostare i font dell'interfaccia
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dipendenze-del-software" class="md-nav__link">
-    Dipendenze del software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#progetti-open-source" class="md-nav__link">
-    Progetti Open Source
+  <a href="#modificare-il-tema-delle-icone" class="md-nav__link">
+    Modificare il tema delle icone
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#termini" class="md-nav__link">
-    Termini
-  </a>
-  
-    <nav class="md-nav" aria-label="Termini">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upstream-e-downstream-nel-contesto-del-kernel-linux" class="md-nav__link">
-    Upstream e downstream nel contesto del kernel Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upstream-e-downstream-nel-contesto-delle-applicazioni" class="md-nav__link">
-    Upstream e downstream nel contesto delle applicazioni
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flusso-automatico" class="md-nav__link">
-    Flusso automatico
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusione" class="md-nav__link">
-    Conclusione
-  </a>
   
 </li>
       
@@ -1202,97 +1222,105 @@
   <nav class="md-tags" >
     
       
-        <span class="md-tag">software</span>
+        <span class="md-tag">gnome</span>
       
     
       
-        <span class="md-tag">opensource</span>
+        <span class="md-tag">desktop</span>
       
     
   </nav>
 
 
 
-  <h1>Upstream - Downstream</h1>
+  <h1>GSettings</h1>
 
-<h2 id="cose-upstream-e-downstream-nello-sviluppo-del-software">Cos'è Upstream e Downstream nello sviluppo del software?</h2>
-<p>Molto spesso le definizione delle parole Upstream (a monte) e Downstream (a valle) creano confusione nei vari contesti di sviluppo del software. Per questo cercheremo di fare un pò di chiarezza a riguardo. Partiamo da un processo generico di produzione, anche se non ha niente a che fare con lo sviluppo del software è una buona base di partenza per la comprensione dei concetti.</p>
-<h2 id="a-monte-e-a-valle-in-un-processo-di-produzione">A monte e a valle in un processo di produzione</h2>
-<h3 id="passi-del-processo-da-monte-a-valle">Passi del processo da monte a valle</h3>
-<pre class="mermaid"><code>graph LR
-  A[\Raccolta/]--&gt;B[Assemblaggio]--&gt;C((Finitura));</code></pre>
-<p>Nel nostro esempio di processo, abbiamo tre passaggi:</p>
+<h2 id="gestire-le-impostazioni-di-gnome-dalla-riga-di-comando-con-gsettings">Gestire le impostazioni di GNOME dalla riga di comando con <code>gsettings</code></h2>
+<p>Le applicazioni GNOME (e altre) utilizzano comunemente l'API GSettings per memorizzare le impostazioni delle applicazioni.</p>
+<p>GSettings ha molti aspetti positivi:</p>
 <ul>
-<li>raccolta delle parti</li>
-<li>assemblaggio delle parti</li>
-<li>finitura dell'assemblaggio</li>
+<li>tipi di dati flessibili, con schemi <a href="#Gvariant"><em>GVariant</em></a>
+   , in modo che altri possano capire le impostazioni (ad esempio, <em>dconf-editor</em>)</li>
+<li>sovrascritture, in modo che le distro possano modificare le impostazioni predefinite che non gradiscono.</li>
 </ul>
-<p>Un processo di produzione è molto simile a un fiume, quindi è facile capire che mentre il processo va da un passaggio al successivo, ci stiamo muovendo verso valle.</p>
-<p>Possiamo quindi ricavare le seguenti regole:</p>
-<ul>
-<li>Regola della dipendenza: ogni elemento dipende da tutti gli elementi a monte dal suo punto di vista</li>
-<li>Regola del valore: muovendosi a valle, ogni passo aggiunge più valore al prodotto</li>
-</ul>
-<p>Ora, proviamo ad applicare queste regole a diversi contesti di sviluppo del software.</p>
-<h3 id="dipendenze-del-software">Dipendenze del software</h3>
-<p>La maggior parte dei componenti software hanno dipendenze da altri componenti. Quindi cos'è una dipendenza a monte e una dipendenza a valle?</p>
-<p>Considerate questa figura:</p>
-<pre class="mermaid"><code>graph LR
-  A([Componente A])---&gt;B([Componente B]) ---&gt; C([Componente C]);</code></pre>
-<p>Il componente C dipende dal componente B che a sua volta dipende dal componente A.</p>
-<p>Applicando la <em>Regola della Dipendenza</em>, possiamo tranquillamente dire che il componente A è a monte del componente B che è a monte del componente C.</p>
-<p>Applicare la <em>Regola del Valore</em> qui è un po' più astratto, ma possiamo dire che il componente C detiene il maggior valore poiché "importa" tutte le caratteristiche dei componenti B e A e aggiunge il proprio valore a quelle caratteristiche, rendendolo il componente a valle.</p>
-<h3 id="progetti-open-source">Progetti Open Source</h3>
-<p>Un altro contesto in cui le parole <em>Upstream</em> e <em>Downstream</em> sono molto usate è nello sviluppo open source. In realtà è molto simile alle dipendenze dei componenti discusse sopra.</p>
-<p>Consideriamo i progetti A e B, dove A è un progetto originale e B è un fork di A:</p>
-<pre class="mermaid"><code>graph LR
-  A([Progetto A])-- fork --&gt;B([Progetto B])--&gt;C([Patch e Fix]);
-  C -- Push Request --&gt; A</code></pre>
-<p>Questo è uno stile di sviluppo piuttosto comune nei progetti open source: si crea un fork di un progetto, si corregge un bug o si aggiunge una caratteristica in quel fork e poi si invia una patch al progetto originale.</p>
-<p>In questo contesto, la regola della dipendenza rende il progetto A il progetto a monte, poiché può benissimo vivere senza il progetto B, ma il progetto B (il fork) non esisterebbe nemmeno senza il progetto A (il progetto originale).</p>
-<p>Si applica anche la Regola del Valore: poiché il progetto B aggiunge una nuova caratteristica o un bugfix, aggiungendo valore al progetto originale A. Così, ogni volta che contribuiamo con una patch ad un progetto open source possiamo dire che abbiamo inviato una patch a monte.</p>
-<p>In ogni contesto in cui si usa il concetto di <em>Upstream</em> e <em>Downstream</em>, possiamo applicare due semplici regole per scoprire quale elemento è a monte o a valle di un altro.</p>
-<blockquote>
-<p>Se un elemento aggiunge valore ad un altro o dipende da esso in qualsiasi altro modo, è quasi certamente a valle.</p>
-</blockquote>
-<h2 id="termini">Termini</h2>
-<p>Upstream e Downstream sono termini non molto usati dagli utilizzatori di computer. Se sei un utente di Linux e non scrivi o mantieni software, ci sono buone probabilità che questi termini non significhino nulla per te, ma possono essere istruttivi su come funziona la comunicazione tra gruppi all'interno del mondo Linux.</p>
-<p>I termini sono usati nel networking, nella programmazione, nel kernel, e anche in aree non informatiche come le catene di approvvigionamento.</p>
-<p>Quando si parla di Upstream e Downstream quindi, il contesto è importante. Nella sua forma più semplice, <em>upstream</em> e <em>downstream</em> sono la direzione del flusso di informazioni.</p>
-<p>Che i dati siano a monte o a valle è probabilmente poco importante per noi come utenti, ma è importante per gli amministratori di server che controllano l'uso della larghezza di banda, così come per i distributori e i programmatori di applicazioni.</p>
-<p>Nel mondo Linux, upstream e downstream hanno due contesti principali. Uno riguarda il <em>kernel</em> e l'altro le <em>applicazioni</em>. Ce ne sono altri, ma per ora ci soffermeremo su questi due.</p>
-<h3 id="upstream-e-downstream-nel-contesto-del-kernel-linux">Upstream e downstream nel contesto del kernel Linux</h3>
-<p>Linux è il kernel. Nel creare una distribuzione (spesso chiamata "distro"), le distribuzioni Linux inizialmente usano il codice sorgente di un kernel non modificato. Le patch necessarie vengono aggiunte e poi il kernel viene configurato. La configurazione del kernel è basata su quali caratteristiche e opzioni la distribuzione vuole offrire. Una volta deciso, il kernel viene creato di conseguenza.</p>
-<p>Il kernel originale è a monte della distribuzione. Quando la distribuzione ottiene il codice sorgente, questo scorre a valle. Una volta che la distribuzione ha il codice, esso rimane con i creatori della distribuzione mentre si lavora su di esso. È ancora a monte rispetto a noi, come utenti, finché non è pronto per il rilascio.</p>
-<p>La versione del kernel che la distribuzione crea avrà patch aggiunte e certe caratteristiche e opzioni abilitate. Questa configurazione è determinata dallo sviluppatore della distro. Questo è il motivo per cui ci sono diverse versioni di Linux: Debian contro Red Hat, per esempio. Lo sviluppatore della distro decide le opzioni da offrire alla propria base di utenti, e compila il kernel di conseguenza.</p>
-<p>Una volta che quel lavoro è completato, viene reso pronto per il rilascio in un repository e ci è permesso di prenderne una copia. Quella copia scorre a valle fino a noi.</p>
-<p>Allo stesso modo, se il distributore trova un bug nel kernel, lo corregge e poi manda la patch agli sviluppatori del kernel in modo che possano correggere il kernel per tutti quelli a valle. Questo si chiama contribuire all'upstream perché qui il flusso va verso l'alto fino alla fonte originale.</p>
-<h3 id="upstream-e-downstream-nel-contesto-delle-applicazioni">Upstream e downstream nel contesto delle applicazioni</h3>
-<p>Di nuovo, tecnicamente, Linux è il kernel, tutto il resto è software aggiuntivo. Il costruttore della distro aggiunge anche software aggiuntivo al suo progetto. In questo caso, ci sono diversi software aggiuntivi. Una distro può contenere qualsiasi numero di applicazioni come X, KDE, Gnome, e così via.</p>
-<p>Immaginiamo che stiate usando l'editor <em>nano</em> e scopriate che non funziona bene, quindi inviate una segnalazione di bug al distributore. I programmatori che lavorano alla distro lo guarderanno e, se trovano che hanno inserito un bug in nano, lo correggeranno e renderanno disponibile una nuova versione nel loro repository. Se trovano che non hanno inserito il bug, il distributore invierà un bug report a monte al programmatore di nano.</p>
-<p>Quando si tratta di cose come segnalazioni di bug, richieste di caratteristiche, ecc. è sempre meglio inviarle a monte al vostro distributore, dato che loro mantengono il kernel e le applicazioni aggiuntive per la distro che state usando.</p>
-<p>Una volta sistemato, il programma aggiornato viene messo in un repository a vostra disposizione. Quando ricevi l'aggiornamento, ti arriva a valle, in questo modo:</p>
-<ul>
-<li>Se un distributore fa la correzione, la nuova versione è resa disponibile nel repository della distribuzione</li>
-<li>Se il programmatore dell'applicazione fa la correzione, questa viene inviata a valle ai distributori che testano il nuovo codice. Una volta trovato che funziona bene, viene messo nel repository, per fluire a valle fino a te</li>
-</ul>
-<h3 id="flusso-automatico">Flusso automatico</h3>
-<p>C'è stato un tempo in cui gli utenti dovevano ottenere i propri aggiornamenti. Un utente otteneva il codice sorgente aggiornato e compilava un nuovo eseguibile. Con il passare del tempo, utility come <code>dnf</code> o <code>apt</code> sono state create per permettere agli utenti di estrarre i binari aggiornati (eseguibili) dai repository.</p>
-<p>Programmi come <em>dnf</em> si occupano del lavoro <em>upstream/downstream</em>. Se hai eseguito <code>dnf</code> con l'opzione di aggiornamento in questo modo:</p>
-<div class="highlight"><pre><span></span><code>dnf update
+<p>Ha diversi backend, in modo da poter essere adattato per funzionare in modo trasparente in molte situazioni. Un esempio di come questo sia utile è quando si usa un backend di memoria per evitare di far persistere le impostazioni durante l'esecuzione dei test.</p>
+<p>Il backend di <em>GSettings</em> che viene normalmente utilizzato per il funzionamento normale è quello di <strong>DConf</strong>.</p>
+<p>Queste impostazioni sono memorizzate in forma binaria per un rapido recupero e possono essere manipolate anche al di fuori dell'applicazione, utilizzando strumenti specifici.</p>
+<p>Questo sistema può essere visto come un database, il cui schema è descritto in un file XML (convenzionalmente chiamato <em>.gschema.xml</em>) che viene poi compilato per migliorare le prestazioni in fase di esecuzione.</p>
+<p><a id="Gvariant"></a>GLib supporta un formato di dati binari chiamato GVariant, comunemente utilizzato per memorizzare varie forme di dati applicativi. Ad esempio, viene utilizzato per memorizzare il database dconf e come i dati on-disk nei repository OSTree.</p>
+<h2 id="gsettings">gsettings</h2>
+<p>È uno strumento a riga di comando per visualizzare e modificare le impostazioni GSettings e funziona indipendentemente dal backend GSettings in uso. Per modificare la memoria del backend dconf, si può usare anche lo strumento dconf, ma si dovrebbe preferire gsettings.</p>
+<p>Si veda l'output --help dei due strumenti per informazioni sul loro utilizzo. </p>
+<h3 id="impostare-i-font-dellinterfaccia">Impostare i font dell'interfaccia</h3>
+<p>Per prima cosa dobbiamo cercare le chiavi corrispondenti memorizzate in dconf, per far questo usiamo il comando <em>gsettings list-keys</em>:</p>
+<div class="highlight"><pre><span></span><code>gsettings list-keys org.gnome.desktop.interface <span class="p">|</span> grep font
+document-font-name
+font-antialiasing
+font-hinting
+font-name
+font-rgba-order
+monospace-font-name
 </code></pre></div>
-<p>cercherà (a monte) il repository della distro, troverà tutti i pacchetti aggiornati necessari e li scaricherà (a valle) sulla tua macchina e li installerà.</p>
-<h2 id="conclusione">Conclusione</h2>
-<p>A monte e a valle è davvero solo la direzione del flusso di dati. Quanto a monte o a valle questi dati fluiscono dipende da chi alla fine ha bisogno di lavorarci. Fondamentalmente, i programmatori sono a monte e gli utenti sono a valle.</p>
-<p>Di nuovo, come utenti, non abbiamo davvero bisogno di preoccuparci di questi termini, ma i concetti aiutano nello sviluppo e nella manutenzione del software. Essendo in grado di indirizzare il lavoro al gruppo appropriato, si evita il lavoro duplicato. Assicura anche il mantenimento di uno standard.</p>
-<p>Se trovate un bug su qualsiasi programma nella vostra distro, segnalatelo semplicemente ai manutentori della vostra distro, cosa che di solito si fa attraverso il loro sito web. Lo invierete a monte a loro, ma non importa se non vi ricordate che state inviando la <em>segnalazione a monte</em>.</p>
+<p>A questo punto sappiamo che le chiavi che definiscono le impostazioni dei font sono quelle elencate sopra e possiamo verificare il valore di una delle chiavi con <em>gsettings get</em>:</p>
+<div class="highlight"><pre><span></span><code>gsettings get org.gnome.desktop.interface font-name
+<span class="s1">&#39;Cantarell 11&#39;</span>
+</code></pre></div>
+<p>Per modificare il font per l'interfaccia si utilizza il comando gsettings set:</p>
+<div class="highlight"><pre><span></span><code>gsettings <span class="nb">set</span> org.gnome.desktop.interface font-name <span class="s2">&quot;Montserrat 11&quot;</span> 
+</code></pre></div>
+<p>Se ora andiamo a ripetere il comando per visualizzare il valore della chiave appena modificata troveremo la nostra impostazione:</p>
+<div class="highlight"><pre><span></span><code>gsettings get org.gnome.desktop.interface font-name
+<span class="s1">&#39;Montserrat 11&#39;</span>
+</code></pre></div>
+<p>Una impostazione interessante per chi utilizza frequentemente la shell e la chiave <em>monospace-font-name</em> che definisce il carattere utilizzato nella shell, questo può essere modificato con un carattere più adatto alla programmazione come <a href="https://github.com/tonsky/FiraCode">FiraCode</a>, <a href="https://github.com/adobe-fonts/source-code-pro">Source Code Pro</a>, etc:</p>
+<div class="highlight"><pre><span></span><code>gsettings get org.gnome.desktop.interface monospace-font-name
+<span class="s1">&#39;Monospace 11&#39;</span>
+</code></pre></div>
+<p>Per modificarlo:</p>
+<div class="highlight"><pre><span></span><code>gsettings <span class="nb">set</span> org.gnome.desktop.interface monospacefont-name <span class="s2">&quot;Red Hat Mono 12&quot;</span> 
+</code></pre></div>
+<h3 id="modificare-il-tema-delle-icone">Modificare il tema delle icone</h3>
+<p>Allo stesso modo interroghiamo la configurazione dell'interfaccia con <em>gsettings list-keys</em> per vedere quali chiavi contengono i valori sul tema delle icone:</p>
+<div class="highlight"><pre><span></span><code>gsettings list-keys org.gnome.desktop.interface <span class="p">|</span> grep icon
+icon-theme
+toolbar-icons-size
+</code></pre></div>
+<p>Ricaviamo il valore con <em>gsettings get</em>:</p>
+<div class="highlight"><pre><span></span><code>gsettings get org.gnome.desktop.interface icon-theme
+<span class="s1">&#39;Tela-nord&#39;</span>
+</code></pre></div>
+<p>I temi disponibili sono memorizzati in /usr/share/icons e possono essere visualizzati con il comando:</p>
+<div class="highlight"><pre><span></span><code>tree -L <span class="m">1</span> /usr/share/icons/
+/usr/share/icons/
+├── Adwaita
+├── Bluecurve
+├── default
+├── gnome
+├── gnome-logo-text-dark.svg
+├── gnome-logo-text.svg
+├── hicolor
+├── HighContrast
+├── locolor
+├── Newaita
+└── oxygen
+</code></pre></div>
+<p>Modifichiamo quindi il tema con <em>gsettings set</em>:</p>
+<div class="highlight"><pre><span></span><code>gsettings <span class="nb">set</span> org.gnome.desktop.interface icon-theme <span class="s1">&#39;Newaita&#39;</span>
+</code></pre></div>
+<p><img alt="Tema Newaita" src="../images/newaita_theme.png" /></p>
+<p>NOTA: Il tema Newaita non è installato di default ma può essere scaricato da <a href="https://www.gnome-look.org">Gnome Look</a></p>
+<div class="highlight"><pre><span></span><code>gsettings set org.gnome.desktop.interface document-font-name &#39;Sans 10&#39;
+gsettings set org.gnome.desktop.interface font-name &#39;Ubuntu 10&#39;
+gsettings set org.gnome.desktop.interface monospace-font-name &#39;Ubuntu Mono 11&#39;
+gsettings set org.gnome.nautilus.desktop font &#39;Ubuntu 10&#39;
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Ultimo aggiornamento:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 luglio 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 luglio 2022</span>
       
     
   </small>
@@ -1333,13 +1361,13 @@
       
       
         
-        <a href="../03_epel_intro/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: EPEL Repository" rel="next">
+        <a href="../kernel_realtime/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: Kernel Real-Time" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Prossimo
               </span>
-              EPEL Repository
+              Kernel Real-Time
             </div>
           </div>
           <div class="md-footer__button md-icon">

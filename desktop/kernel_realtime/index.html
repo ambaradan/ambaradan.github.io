@@ -13,7 +13,7 @@
     
     
       
-        <title>Upstream - Downstream - unixlike.info</title>
+        <title>Kernel Real-Time - unixlike.info</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cose-upstream-e-downstream-nello-sviluppo-del-software" class="md-skip">
+        <a href="#lavorare-con-il-kernel-real-time-su-rocky-linux" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Upstream - Downstream
+              Kernel Real-Time
             
           </span>
         </div>
@@ -200,13 +200,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../desktop/gsettings/" class="md-tabs__link">
+      <a href="../gsettings/" class="md-tabs__link md-tabs__link--active">
         Desktop
       </a>
     </li>
@@ -412,12 +414,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -440,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../desktop/gsettings/" class="md-nav__link">
+      <a href="../gsettings/" class="md-nav__link">
         GSettings
       </a>
     </li>
@@ -452,11 +456,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../desktop/kernel_realtime/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kernel Real-Time
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Kernel Real-Time
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lavorare-con-il-kernel-real-time-su-rocky-linux" class="md-nav__link">
+    Lavorare con il kernel real-time su Rocky Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#che-cose-il-kernel-in-real-time" class="md-nav__link">
+    Che cos'è il kernel in real-time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazione-del-kernel-rt-su-rocky-linux" class="md-nav__link">
+    Installazione del kernel RT su Rocky Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusione" class="md-nav__link">
+    Conclusione
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1103,77 +1165,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cose-upstream-e-downstream-nello-sviluppo-del-software" class="md-nav__link">
-    Cos'è Upstream e Downstream nello sviluppo del software?
+  <a href="#lavorare-con-il-kernel-real-time-su-rocky-linux" class="md-nav__link">
+    Lavorare con il kernel real-time su Rocky Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-monte-e-a-valle-in-un-processo-di-produzione" class="md-nav__link">
-    A monte e a valle in un processo di produzione
+  <a href="#che-cose-il-kernel-in-real-time" class="md-nav__link">
+    Che cos'è il kernel in real-time?
   </a>
-  
-    <nav class="md-nav" aria-label="A monte e a valle in un processo di produzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passi-del-processo-da-monte-a-valle" class="md-nav__link">
-    Passi del processo da monte a valle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dipendenze-del-software" class="md-nav__link">
-    Dipendenze del software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#progetti-open-source" class="md-nav__link">
-    Progetti Open Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#termini" class="md-nav__link">
-    Termini
+  <a href="#installazione-del-kernel-rt-su-rocky-linux" class="md-nav__link">
+    Installazione del kernel RT su Rocky Linux
   </a>
-  
-    <nav class="md-nav" aria-label="Termini">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upstream-e-downstream-nel-contesto-del-kernel-linux" class="md-nav__link">
-    Upstream e downstream nel contesto del kernel Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upstream-e-downstream-nel-contesto-delle-applicazioni" class="md-nav__link">
-    Upstream e downstream nel contesto delle applicazioni
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flusso-automatico" class="md-nav__link">
-    Flusso automatico
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1202,97 +1210,106 @@
   <nav class="md-tags" >
     
       
-        <span class="md-tag">software</span>
+        <span class="md-tag">desktop</span>
       
     
       
-        <span class="md-tag">opensource</span>
+        <span class="md-tag">multimedia</span>
+      
+    
+      
+        <span class="md-tag">rocky linux</span>
       
     
   </nav>
 
 
 
-  <h1>Upstream - Downstream</h1>
+  <h1>Kernel Real-Time</h1>
 
-<h2 id="cose-upstream-e-downstream-nello-sviluppo-del-software">Cos'è Upstream e Downstream nello sviluppo del software?</h2>
-<p>Molto spesso le definizione delle parole Upstream (a monte) e Downstream (a valle) creano confusione nei vari contesti di sviluppo del software. Per questo cercheremo di fare un pò di chiarezza a riguardo. Partiamo da un processo generico di produzione, anche se non ha niente a che fare con lo sviluppo del software è una buona base di partenza per la comprensione dei concetti.</p>
-<h2 id="a-monte-e-a-valle-in-un-processo-di-produzione">A monte e a valle in un processo di produzione</h2>
-<h3 id="passi-del-processo-da-monte-a-valle">Passi del processo da monte a valle</h3>
-<pre class="mermaid"><code>graph LR
-  A[\Raccolta/]--&gt;B[Assemblaggio]--&gt;C((Finitura));</code></pre>
-<p>Nel nostro esempio di processo, abbiamo tre passaggi:</p>
-<ul>
-<li>raccolta delle parti</li>
-<li>assemblaggio delle parti</li>
-<li>finitura dell'assemblaggio</li>
-</ul>
-<p>Un processo di produzione è molto simile a un fiume, quindi è facile capire che mentre il processo va da un passaggio al successivo, ci stiamo muovendo verso valle.</p>
-<p>Possiamo quindi ricavare le seguenti regole:</p>
-<ul>
-<li>Regola della dipendenza: ogni elemento dipende da tutti gli elementi a monte dal suo punto di vista</li>
-<li>Regola del valore: muovendosi a valle, ogni passo aggiunge più valore al prodotto</li>
-</ul>
-<p>Ora, proviamo ad applicare queste regole a diversi contesti di sviluppo del software.</p>
-<h3 id="dipendenze-del-software">Dipendenze del software</h3>
-<p>La maggior parte dei componenti software hanno dipendenze da altri componenti. Quindi cos'è una dipendenza a monte e una dipendenza a valle?</p>
-<p>Considerate questa figura:</p>
-<pre class="mermaid"><code>graph LR
-  A([Componente A])---&gt;B([Componente B]) ---&gt; C([Componente C]);</code></pre>
-<p>Il componente C dipende dal componente B che a sua volta dipende dal componente A.</p>
-<p>Applicando la <em>Regola della Dipendenza</em>, possiamo tranquillamente dire che il componente A è a monte del componente B che è a monte del componente C.</p>
-<p>Applicare la <em>Regola del Valore</em> qui è un po' più astratto, ma possiamo dire che il componente C detiene il maggior valore poiché "importa" tutte le caratteristiche dei componenti B e A e aggiunge il proprio valore a quelle caratteristiche, rendendolo il componente a valle.</p>
-<h3 id="progetti-open-source">Progetti Open Source</h3>
-<p>Un altro contesto in cui le parole <em>Upstream</em> e <em>Downstream</em> sono molto usate è nello sviluppo open source. In realtà è molto simile alle dipendenze dei componenti discusse sopra.</p>
-<p>Consideriamo i progetti A e B, dove A è un progetto originale e B è un fork di A:</p>
-<pre class="mermaid"><code>graph LR
-  A([Progetto A])-- fork --&gt;B([Progetto B])--&gt;C([Patch e Fix]);
-  C -- Push Request --&gt; A</code></pre>
-<p>Questo è uno stile di sviluppo piuttosto comune nei progetti open source: si crea un fork di un progetto, si corregge un bug o si aggiunge una caratteristica in quel fork e poi si invia una patch al progetto originale.</p>
-<p>In questo contesto, la regola della dipendenza rende il progetto A il progetto a monte, poiché può benissimo vivere senza il progetto B, ma il progetto B (il fork) non esisterebbe nemmeno senza il progetto A (il progetto originale).</p>
-<p>Si applica anche la Regola del Valore: poiché il progetto B aggiunge una nuova caratteristica o un bugfix, aggiungendo valore al progetto originale A. Così, ogni volta che contribuiamo con una patch ad un progetto open source possiamo dire che abbiamo inviato una patch a monte.</p>
-<p>In ogni contesto in cui si usa il concetto di <em>Upstream</em> e <em>Downstream</em>, possiamo applicare due semplici regole per scoprire quale elemento è a monte o a valle di un altro.</p>
-<blockquote>
-<p>Se un elemento aggiunge valore ad un altro o dipende da esso in qualsiasi altro modo, è quasi certamente a valle.</p>
-</blockquote>
-<h2 id="termini">Termini</h2>
-<p>Upstream e Downstream sono termini non molto usati dagli utilizzatori di computer. Se sei un utente di Linux e non scrivi o mantieni software, ci sono buone probabilità che questi termini non significhino nulla per te, ma possono essere istruttivi su come funziona la comunicazione tra gruppi all'interno del mondo Linux.</p>
-<p>I termini sono usati nel networking, nella programmazione, nel kernel, e anche in aree non informatiche come le catene di approvvigionamento.</p>
-<p>Quando si parla di Upstream e Downstream quindi, il contesto è importante. Nella sua forma più semplice, <em>upstream</em> e <em>downstream</em> sono la direzione del flusso di informazioni.</p>
-<p>Che i dati siano a monte o a valle è probabilmente poco importante per noi come utenti, ma è importante per gli amministratori di server che controllano l'uso della larghezza di banda, così come per i distributori e i programmatori di applicazioni.</p>
-<p>Nel mondo Linux, upstream e downstream hanno due contesti principali. Uno riguarda il <em>kernel</em> e l'altro le <em>applicazioni</em>. Ce ne sono altri, ma per ora ci soffermeremo su questi due.</p>
-<h3 id="upstream-e-downstream-nel-contesto-del-kernel-linux">Upstream e downstream nel contesto del kernel Linux</h3>
-<p>Linux è il kernel. Nel creare una distribuzione (spesso chiamata "distro"), le distribuzioni Linux inizialmente usano il codice sorgente di un kernel non modificato. Le patch necessarie vengono aggiunte e poi il kernel viene configurato. La configurazione del kernel è basata su quali caratteristiche e opzioni la distribuzione vuole offrire. Una volta deciso, il kernel viene creato di conseguenza.</p>
-<p>Il kernel originale è a monte della distribuzione. Quando la distribuzione ottiene il codice sorgente, questo scorre a valle. Una volta che la distribuzione ha il codice, esso rimane con i creatori della distribuzione mentre si lavora su di esso. È ancora a monte rispetto a noi, come utenti, finché non è pronto per il rilascio.</p>
-<p>La versione del kernel che la distribuzione crea avrà patch aggiunte e certe caratteristiche e opzioni abilitate. Questa configurazione è determinata dallo sviluppatore della distro. Questo è il motivo per cui ci sono diverse versioni di Linux: Debian contro Red Hat, per esempio. Lo sviluppatore della distro decide le opzioni da offrire alla propria base di utenti, e compila il kernel di conseguenza.</p>
-<p>Una volta che quel lavoro è completato, viene reso pronto per il rilascio in un repository e ci è permesso di prenderne una copia. Quella copia scorre a valle fino a noi.</p>
-<p>Allo stesso modo, se il distributore trova un bug nel kernel, lo corregge e poi manda la patch agli sviluppatori del kernel in modo che possano correggere il kernel per tutti quelli a valle. Questo si chiama contribuire all'upstream perché qui il flusso va verso l'alto fino alla fonte originale.</p>
-<h3 id="upstream-e-downstream-nel-contesto-delle-applicazioni">Upstream e downstream nel contesto delle applicazioni</h3>
-<p>Di nuovo, tecnicamente, Linux è il kernel, tutto il resto è software aggiuntivo. Il costruttore della distro aggiunge anche software aggiuntivo al suo progetto. In questo caso, ci sono diversi software aggiuntivi. Una distro può contenere qualsiasi numero di applicazioni come X, KDE, Gnome, e così via.</p>
-<p>Immaginiamo che stiate usando l'editor <em>nano</em> e scopriate che non funziona bene, quindi inviate una segnalazione di bug al distributore. I programmatori che lavorano alla distro lo guarderanno e, se trovano che hanno inserito un bug in nano, lo correggeranno e renderanno disponibile una nuova versione nel loro repository. Se trovano che non hanno inserito il bug, il distributore invierà un bug report a monte al programmatore di nano.</p>
-<p>Quando si tratta di cose come segnalazioni di bug, richieste di caratteristiche, ecc. è sempre meglio inviarle a monte al vostro distributore, dato che loro mantengono il kernel e le applicazioni aggiuntive per la distro che state usando.</p>
-<p>Una volta sistemato, il programma aggiornato viene messo in un repository a vostra disposizione. Quando ricevi l'aggiornamento, ti arriva a valle, in questo modo:</p>
-<ul>
-<li>Se un distributore fa la correzione, la nuova versione è resa disponibile nel repository della distribuzione</li>
-<li>Se il programmatore dell'applicazione fa la correzione, questa viene inviata a valle ai distributori che testano il nuovo codice. Una volta trovato che funziona bene, viene messo nel repository, per fluire a valle fino a te</li>
-</ul>
-<h3 id="flusso-automatico">Flusso automatico</h3>
-<p>C'è stato un tempo in cui gli utenti dovevano ottenere i propri aggiornamenti. Un utente otteneva il codice sorgente aggiornato e compilava un nuovo eseguibile. Con il passare del tempo, utility come <code>dnf</code> o <code>apt</code> sono state create per permettere agli utenti di estrarre i binari aggiornati (eseguibili) dai repository.</p>
-<p>Programmi come <em>dnf</em> si occupano del lavoro <em>upstream/downstream</em>. Se hai eseguito <code>dnf</code> con l'opzione di aggiornamento in questo modo:</p>
-<div class="highlight"><pre><span></span><code>dnf update
+<h2 id="lavorare-con-il-kernel-real-time-su-rocky-linux">Lavorare con il kernel real-time su Rocky Linux</h2>
+<p>Vale la pena di eseguire un kernel real-time e di valutarne il potenziale e i vantaggi in termini di prestazioni per le applicazioni.</p>
+<p>La funzionalità del kernel real-time esistono da oltre un decennio nell'ecosistema open-source. Allo stesso modo, il supporto di Red Hat Enterprise Linux:tm: (RHEL) per il kernel in tempo reale è disponibile da diversi anni. Tuttavia, molti amministratori di sistema interpretano in modo errato i suoi concetti fondamentali e il suo reale comportamento operativo. In questo articolo descrivo alcune delle sue caratteristiche principali, le differenze rispetto al kernel standard e i passaggi rapidi per l'installazione.</p>
+<h2 id="che-cose-il-kernel-in-real-time">Che cos'è il kernel in real-time?</h2>
+<p>Un kernel real-time non è necessariamente superiore o migliore di un kernel standard. Risponde invece a diversi requisiti aziendali o di sistema. È un kernel ottimizzato progettato per mantenere una bassa latenza, tempi di risposta costanti e determinismo. A titolo di paragone, un kernel RHEL standard si concentra su operazioni orientate al rendimento e su una pianificazione equa dei compiti. Il kernel in tempo reale è conosciuto anche come kernel-rt o preempt-rt.</p>
+<p>Il modo più semplice per identificare un kernel in tempo reale è eseguire il comando <code>uname -r</code> sul terminale e cercare la parola chiave <em>rt</em> nella versione del kernel. Se manca la parola rt, il sistema utilizza il kernel standard.</p>
+<p>Questo è il kernel rt attuale per <strong>Rocky Linux 9</strong>.</p>
+<div class="highlight"><pre><span></span><code>uname -r
+kernel-rt-5.14.0-70.13.1.rt21.83.el9_0.x86_64.rpm
 </code></pre></div>
-<p>cercherà (a monte) il repository della distro, troverà tutti i pacchetti aggiornati necessari e li scaricherà (a valle) sulla tua macchina e li installerà.</p>
+<p>Alcuni importanti meccanismi del kernel-rt includono:</p>
+<ul>
+<li>La priorità di un task viene controllata (1-99) in condizioni di carico elevato.</li>
+<li>Ai task ad alta priorità (99) viene data la preferenza per l'esecuzione da parte della CPU.</li>
+<li>Non utilizza la politica di Completely Fair Scheduling (CFS).</li>
+<li>Le politiche di schedulazione in uso sono SCHED_FIFO o SCHED_RR.</li>
+<li>Mantiene un tempo di esecuzione a bassa latenza.</li>
+<li>Offre la possibilità di misurare, registrare e configurare il tempo di risposta.</li>
+</ul>
+<p>Di seguito sono elencate alcune altre differenze fondamentali per confrontare <strong>RHEL for Real Time</strong> con <strong>RHEL standard</strong>:</p>
+<ul>
+<li>Kexec e vmcore - L'installazione e la configurazione sono le stesse di RHEL standard.</li>
+<li>Moduli di terze parti - Tutti i moduli devono essere ricompilati con kernel-rt prima di essere utilizzati.</li>
+<li>Demone irqbalance - Disabilitato per impostazione predefinita.</li>
+<li>Politica di pianificazione - Vengono utilizzati solo SCHED_FIFO o SCHED_RR.</li>
+<li>Interrupt (IRQ) - Utilizza CPU dedicate per isolare i processi gli uni dagli altri.</li>
+</ul>
+<h2 id="installazione-del-kernel-rt-su-rocky-linux">Installazione del kernel RT su Rocky Linux</h2>
+<p>Il repository RT è disabilitato per impostazione predefinita.</p>
+<div class="highlight"><pre><span></span><code>dnf repolist --all <span class="p">|</span> grep rt
+rt                                          Rocky Linux <span class="m">9</span> - Realtim disabilitato
+rt-debug                                    Rocky Linux <span class="m">9</span> - Realtim disabilitato
+rt-source                                   Rocky Linux <span class="m">9</span> - Realtim disabilitato
+</code></pre></div>
+<p>Per installare il kernel real-time dobbiamo abilitare il repository corrispondente con il comando:</p>
+<div class="highlight"><pre><span></span><code>dnf config-manager --set-enabled rt
+</code></pre></div>
+<p>E confermare l'avvenuta abilitazione con:</p>
+<div class="highlight"><pre><span></span><code>sudo dnf grouplist <span class="p">|</span> grep RT
+   RT
+</code></pre></div>
+<p>A questo punto possiamo passare all'intallazione del gruppo corrispondente con:</p>
+<div class="highlight"><pre><span></span><code>dnf groupinstall RT
+Ultima verifica della scadenza dei metadati: <span class="m">0</span>:05:09 fa il sab <span class="m">16</span> lug <span class="m">2022</span>, <span class="m">22</span>:52:13.
+Dipendenze risolte.
+<span class="o">=======================================================================================================================================================</span>
+ Package                                      Architecture            Version                                         Repository                  <span class="nv">Size</span>
+<span class="o">=======================================================================================================================================================</span>
+Installing group/module packages:
+ kernel-rt                                    x86_64                  <span class="m">5</span>.14.0-70.13.1.rt21.83.el9_0                    rt                         <span class="m">705</span> k
+ kernel-rt-core                               x86_64                  <span class="m">5</span>.14.0-70.13.1.rt21.83.el9_0                    rt                          <span class="m">33</span> M
+ kernel-rt-devel                              x86_64                  <span class="m">5</span>.14.0-70.13.1.rt21.83.el9_0                    rt                          <span class="m">15</span> M
+ kernel-rt-modules                            x86_64                  <span class="m">5</span>.14.0-70.13.1.rt21.83.el9_0                    rt                          <span class="m">21</span> M
+ kernel-rt-modules-extra                      x86_64                  <span class="m">5</span>.14.0-70.13.1.rt21.83.el9_0                    rt                         <span class="m">1</span>.1 M
+ realtime-setup                               x86_64                  <span class="m">2</span>.2-5.el9                                       rt                          <span class="m">22</span> k
+ realtime-tests                               x86_64                  <span class="m">2</span>.3-3.el9                                       appstream                  <span class="m">176</span> k
+ rteval                                       noarch                  <span class="m">3</span>.3-4.el9_0                                     rt                         <span class="m">126</span> k
+ rteval-loads                                 noarch                  <span class="m">1</span>.5-1.el9                                       rt                         <span class="m">114</span> M
+ tuned-profiles-realtime                      noarch                  <span class="m">2</span>.18.0-1.el9                                    rt                          <span class="m">14</span> k
+Installazione dipendenze:
+ Judy                                         x86_64                  <span class="m">1</span>.0.5-28.el9                                    appstream                  <span class="m">128</span> k
+ gmp-c++                                      x86_64                  <span class="m">1</span>:6.2.0-10.el9                                  appstream                   <span class="m">19</span> k
+ gmp-devel
+.... 
+</code></pre></div>
+<p>Riavviare il sistema e selezionare kernel-rt dalla console di avvio.</p>
+<p>Gli utenti dovrebbero eseguire l'installazione del gruppo RT, in quanto fornisce tutti i pacchetti dipendenti da kernel-rt necessari. La tabella seguente mostra i dettagli dei pacchetti dipendenti:</p>
+<ul>
+<li>kernel-rt - Kernel in tempo reale</li>
+<li>rt-setup - Il pacchetto più importante per la configurazione dell'ambiente RT.</li>
+<li>rtctl - Configura le priorità di pianificazione per i thread del kernel.</li>
+<li>rt-test, rt-checks, rteval - Utilizzati per testare le capacità e i carichi del sistema.</li>
+</ul>
 <h2 id="conclusione">Conclusione</h2>
-<p>A monte e a valle è davvero solo la direzione del flusso di dati. Quanto a monte o a valle questi dati fluiscono dipende da chi alla fine ha bisogno di lavorarci. Fondamentalmente, i programmatori sono a monte e gli utenti sono a valle.</p>
-<p>Di nuovo, come utenti, non abbiamo davvero bisogno di preoccuparci di questi termini, ma i concetti aiutano nello sviluppo e nella manutenzione del software. Essendo in grado di indirizzare il lavoro al gruppo appropriato, si evita il lavoro duplicato. Assicura anche il mantenimento di uno standard.</p>
-<p>Se trovate un bug su qualsiasi programma nella vostra distro, segnalatelo semplicemente ai manutentori della vostra distro, cosa che di solito si fa attraverso il loro sito web. Lo invierete a monte a loro, ma non importa se non vi ricordate che state inviando la <em>segnalazione a monte</em>.</p>
+<p>Vale la pena eseguire un kernel real-time e valutarne il potenziale, poiché molte applicazioni possono trarne beneficio. Il <em>kernel-rt</em> può essere messo a punto per ridurre ulteriormente i problemi di prestazioni. Strumenti come <em>ftrace</em> sono forniti con Rocky Linux e sono molto utili per analizzare e fare il debug dei problemi di latenza. Tuttavia, questi dettagli sono fuori dallo scopo di questo articolo.</p>
+<p>Il kernel in tempo reale esiste da molto tempo, ma molti sysadmin non sono sicuri su come utilizzarlo. Forse il kernel real-time aiuterà la vostre macchine ad ottenere prestazioni Linux ancora più elevate!</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Ultimo aggiornamento:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 luglio 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 luglio 2022</span>
       
     
   </small>
@@ -1317,7 +1334,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Piede" >
       
         
-        <a href="../../sysadmin/ssh_key/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Ssh key" rel="prev">
+        <a href="../gsettings/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: GSettings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1326,20 +1343,20 @@
               <span class="md-footer__direction">
                 Precedente
               </span>
-              Ssh key
+              GSettings
             </div>
           </div>
         </a>
       
       
         
-        <a href="../03_epel_intro/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: EPEL Repository" rel="next">
+        <a href="../../rocky_linux/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: Introduzione" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Prossimo
               </span>
-              EPEL Repository
+              Introduzione
             </div>
           </div>
           <div class="md-footer__button md-icon">
